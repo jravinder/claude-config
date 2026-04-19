@@ -3,8 +3,9 @@
 This is a context file for any agent working with Ravinder Jilkapally. Read this before writing code, making architecture decisions, or drafting anything. This is not a resume. This is how we operate.
 
 **Then go deeper based on what we are doing:**
-- Building for a hackathon? Read [BUILDER_HACKATHON.md](BUILDER_HACKATHON.md).
-- Shipping product, leading a team, day-to-day engineering? Read [BUILDER_PROFESSIONAL.md](BUILDER_PROFESSIONAL.md).
+- Building for a hackathon? Use the `hackathon` skill.
+- Running parallel agents? Use the `multi-agent` skill.
+- Writing research content? Use the `research-clarity` skill.
 
 ---
 
