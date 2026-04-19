@@ -41,17 +41,38 @@ ln -sf ~/.claude/config-repo/skills/eng-workflow ~/.claude/skills/eng-workflow
 ln -sf ~/.claude/config-repo/skills/research-clarity ~/.claude/skills/research-clarity
 ```
 
-## Sync
+## Promoting Learnings
 
-After updating skills:
+When you discover a useful pattern in any repo:
+
+**1. Is it repo-specific?** → Add it to that repo's `CLAUDE.md`
+
+**2. Is it useful across projects?** → Promote it to a skill here:
 ```bash
+# Add or update a skill
 cd ~/.claude/config-repo
-git add -A && git commit -m "Update skills" && git push
+mkdir -p skills/my-new-skill
+# Write SKILL.md
+git add -A && git commit -m "Add my-new-skill" && git push
 ```
 
-On other machines:
+**3. Is it useful to others?** → It's already public. Just push.
+
+Other machines pick it up:
 ```bash
 cd ~/.claude/config-repo && git pull
+```
+
+## Flow: Repo → Skill → Public
+
+```
+Learned something in hd-research-agent?
+  ↓
+Is it HD-specific? → stays in hd-research-agent/CLAUDE.md
+  ↓
+Is it generalizable? → promote to ~/.claude/config-repo/skills/
+  ↓
+Push to GitHub → it's open source, syncs to all machines
 ```
 
 ## What goes where
