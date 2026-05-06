@@ -234,7 +234,13 @@ Pending Gate 1.
 - New agents (or new humans) cold-start from the same surface.
 - The user's role becomes "review and arbitrate," not "be the message bus."
 
-## Reference
+## Why this works
 
-- Nader Khalil / NVIDIA OpenShell — "GitHub as shared memory for parallel agents" (May 2026)
-  https://github.com/NVIDIA/OpenShell/tree/main/examples/multi-agent-notepad
+GitHub is already a coordination layer. Issues outlive sessions, PRs gate
+changes, commit history is the audit log, branches isolate experiments.
+Pairing those primitives with a small set of in-repo protocol files gives
+you durable shared state across agents without standing up new infra.
+
+Every piece of this was earned on real projects — one agent silently shipped
+a regression, another duplicated work that had already been killed, a third
+went dark for days. The protocol is the antibody to each of those.
